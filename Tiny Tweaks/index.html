@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tiny Weaks</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" href="../static/css/base.css">
+	<style>
+	.Tweaks{
+		max-width: 768px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.Tweaks-title,
+	.Tweaks-name{
+		font-size: 5em;
+	}
+	.Tweaks-username{
+		font-size: 2.5em;
+	}
+	.Tweaks-bio{
+		font-size: 2em;
+	}
+	/*.Tweaks.image{
+
+	}*/
+	@media screen and (max-width: 767px){
+		.Tweaks{
+			font-size: 8px;
+		}
+		.Tweaks-image{
+			width: 100%;
+			height: auto;
+		}
+	}
+	</style>
+</head>
+<body>	
+	<div class="Tweaks">
+		<h1 class="Tweaks-name">Daniel Hernandez</h1>
+		<h2 class="Tweaks-username">@daguiheso</h2>
+		<img src="../static/img/avatar.png" width="250" height="250" class="Tweaks-image" />
+		<h1 class="Tweaks-title">Tiny Weaks</h1>
+		<p class="Tweaks-bio">
+			Hola! me llamo Daniel Hernandez y soy un Frontend. Tambien Developer en Ruby On Rails.
+		</p>
+	</div>
+</body>
+</html>
