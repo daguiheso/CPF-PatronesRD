@@ -11,9 +11,9 @@
 	<section class="Canvas">
 		<header class="Header verde_A is-active">
 			<h1 class="Header-logo">Off Canvas</h1>
-			<button class="Header-button is-active">Mostrar Menu</button>
-			<button class="Header-button">Ocultar Menu</button>
-			<ul class="MainMenu">
+			<button class="Header-button is-active" id="showMenu">Mostrar Menu</button>
+			<button class="Header-button" id="hideMenu">Ocultar Menu</button>
+			<ul class="MainMenu" id="menu">
 				<li class="MainMenu-item">
 					<a href="" class="MainMenu-link">
 						Cursos
@@ -40,10 +40,32 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. Dolores, nihil laborum temporibus necessitatibus reiciendis labore et esse facilis.
 		</div>
 		<div class="Canvas-sidebar verde_C">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. 
 		</div>
 	</section>
+	<script>
+		var $buttonShowMenu = document.getElementById('showMenu');
+		var $buttonHideMenu = document.getElementById('hideMenu');
+		var $menu = document.getElementById('menu');
+
+		var mostrarMenu = function(){
+			// console.log('holas');
+			$menu.classList.add('is-active');   //añadiendo clase a elemento
+			$buttonHideMenu.classList.add('is-active');
+		}
+
+		var ocultarMenu = function(){
+			$menu.classList.remove('is-active');   //añadiendo clase a elemento
+			$buttonHideMenu.classList.remove('is-active');
+		}
+
+		$buttonShowMenu.addEventListener("click", mostrarMenu);
+		$buttonHideMenu.addEventListener("click", ocultarMenu);
+	</script>
 </body>
 </html>
