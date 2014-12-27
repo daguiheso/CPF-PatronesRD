@@ -48,10 +48,20 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro tenetur aut omnis dolorum beatae ipsum id, veniam reprehenderit praesentium vitae. 
 		</div>
 	</section>
+	<script src="../static/js/hammer.min.js"></script>
 	<script>
 		var $buttonShowMenu = document.getElementById('showMenu');
 		var $buttonHideMenu = document.getElementById('hideMenu');
 		var $menu = document.getElementById('menu');
+
+		var $body = document.querySelector('body');
+
+		var body = new Hammer($body); //instancia de Hammer.js y como parametro el elemento que quiero que este escuchando todos los eventos
+
+		//hacer que body escuche eventos
+		// body.on('panright', function(){
+		// 	console.log('ha ocurrido un pan');
+		// });
 
 		var mostrarMenu = function(){
 			// console.log('holas');
@@ -66,6 +76,9 @@
 
 		$buttonShowMenu.addEventListener("click", mostrarMenu);
 		$buttonHideMenu.addEventListener("click", ocultarMenu);
+
+		body.on('panright', mostrarMenu);
+		body.on('panleft', ocultarMenu);
 	</script>
 </body>
 </html>
